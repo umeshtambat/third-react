@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function App() {
   return (
     <>
@@ -7,25 +9,26 @@ function App() {
   );
 }
 
-//user
-//userefineTag
+// UserDefineTag
 function CounterApp() {
-  //data member
-  let counter = 1;
+  // Data Member :: stateless/ stateful
+  // let counter = 1; // stateless
+  let [counter, setCounter] = useState(1); // to create stateful variable + this will help to perform dom operation.
 
-
-  //Member function 
+  // Member Function
   let likeMeAction = () => {
     counter = counter + 1;
-  console.log("I am button click", counter);
-  };
+    console.log("I m button click", counter);
 
-  //JSX :: VIEW :: USER-INTERFACE :: Required
+    // Asking REACT TO PERFOMR DOM OEPRATION
+    // Calling setCounter => DOM Operation
+    setCounter(counter);
+  };
 
   return (
     <>
       <h1>{counter}</h1>
-      <input type="button" value="Like Me!" onClick={likeMeAction} />
+      <input type="button" value="Like Me" onClick={likeMeAction} />
     </>
   );
 }
