@@ -2,7 +2,9 @@ import { useState } from "react";
 function App() {
   return (
     <>
-      <h1>Couter App</h1>
+      <h1>Counter App</h1>
+      <CounterApp />
+      <CounterApp />
       <CounterApp />
       <CounterApp />
     </>
@@ -35,7 +37,7 @@ function CounterApp() {
         magni.
       </h5>
       <h5>
-        {counter} <input type="button" value="like Me" onClick={likeMeAction} />
+        {counter} <input type="button" value="&#128077;" onClick={likeMeAction} />
       </h5>
     </>
   );
