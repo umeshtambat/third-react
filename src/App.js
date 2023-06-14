@@ -10,23 +10,22 @@ function App() {
 //user
 //userefineTag
 function CounterApp() {
-  //data menbers
-  let counter = 1;
-  // let buttonTitle = "Like Me";
-  let id = 100;
-  let str = "Hello World";
-  let active = true;
 
+   let counter =100;
   //Member function :: Optional
-  let likeMeAction = () => {};
-  let dislikeMeAction = () => {};
+  let likeMeAction = () => {
+    //alert();
+
+    console.log("I am button click");
+  };
+
 
   //JSX :: VIEW :: USER-INTERFACE :: Required
 
   return (
     <>
       <h1>{counter}</h1>
-      <input type="button" value="Like Me!" />
+      <input type="button" value="Like Me!"  onClick={likeMeAction} />
     </>
   );
 }
