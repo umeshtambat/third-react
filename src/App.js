@@ -1,46 +1,39 @@
-import { useState } from "react";
+
+import {useState} from "react";
 function App() {
   return (
     <>
-      <h1>Counter App</h1>
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
+      <h1>Strig Exampl</h1>
+      <StringDemo/>
     </>
   );
 }
 
-function CounterApp() {
-  // let counter = 1;   //stateless
+function StringDemo() {
+  // let title  = "Hello World";
 
-  //  let var1 = useState(1);
-  // console.log(var1);
+  let [title, setTitle] = useState("Hello World");
 
-  // let list = useState(1);
-  // let[counter, setCounter]= list;
+let lowerCaseAction = () => {
+  title = title.toLowerCase();
+  console.log(title);
+  setTitle(title);
+};
+let upperCaseAction = () => {
+  title = title.toUpperCase();
+  console.log(title);
+  setTitle(title);
+};
 
-  let [counter, setCounter] = useState(1);
-
-  let likeMeAction = () => {
-    counter += 1;
-    console.log(counter);
-
-    //asking react to perform DOM operation
-    setCounter(counter);
-  };
+ 
   return (
     <>
-      <h5>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quam
-        reiciendis nisi, sunt dolore delectus nesciunt minus expedita pariatur
-        magni.
-      </h5>
-      <h5>
-        {counter} <input type="button" value="&#128077;" onClick={likeMeAction} />
-      </h5>
+      <h1>{title}</h1>
+      <input type="button" value="Lower Case" onClick={lowerCaseAction} />
+      <input type="button" value="Upper Case" onClick={upperCaseAction} />
     </>
   );
 }
+
 
 export default App;
