@@ -26,7 +26,7 @@ function AppHeader() {
 function AppBody() {
   return (
     <>
-      <div className="alert-success fs-3">
+      <div className="alert-success fs-3 mb-0">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
         excepturi assumenda eius possimus, reprehenderit autem obcaecati
         exercitationem tenetur quae deserunt quod eveniet qui voluptatum ut
@@ -40,7 +40,13 @@ function AppBody() {
 function AppFooter() {
   return (
     <>
-      <h1>App Footer</h1>
+      <div
+        className="bg-dark  text-light d-flex justify-content-center align-items-center"
+        style={{ height: "2pppx" }}
+      >
+        
+        Lorem ipsum dolor sit amet.
+      </div>
     </>
   );
 }
