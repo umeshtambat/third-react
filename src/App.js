@@ -1,59 +1,22 @@
-import AppHeader from "./pages/AppHeader";
-import AppBody from "./pages/AppBody";
-import AppFooter from "./pages/AppFooter";
-
-//user defined Tag: <App/>
 function App() {
+
   return (
     <>
-      {/* <AppHeader></AppHeader> */}
-      <AppHeader />
-      <AppBody />
-      <AppBody />
-      <AppFooter />
+    <h1>Counter App</h1>
+    <CounterApp />
+
     </>
-  );
+  )
 }
 
-//user defined Tag: <AppHeader/>
-// function AppHeader() {
-//   return (
-//     <div className="row bg-success text-light p-3 fs-1">
-//       {/* <h1 className="bg-dark  trxt-light p-3">Header</h1> */}
-//       <div className="col">Home</div>
-//       <div className="col">Project</div>
-//       <div className="col">AboutUs</div>
-//     </div>
-//   );
-// }
+function CounterApp() {
+  return(
+    <>
+    <h1>1</h1>
+    <input type="button"  value="Like Me!"/>
+    </>
+  )
+}
 
-//user defined Tag: <AppBody/>
-// function AppBody() {
-//   return (
-//     <>
-//       <div className="alert alert-success fs-3 mb-0">
-//         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-//         excepturi assumenda eius possimus, reprehenderit autem obcaecati
-//         exercitationem tenetur quae deserunt quod eveniet qui voluptatum ut
-//         dignissimos itaque officia rerum. Repudiandae!
-//       </div>
-//     </>
-//   );
-// }
 
-//user defined Tag: <AppFooter/>
-// function AppFooter() {
-//   return (
-//     <>
-//       <div
-//         className="bg-dark  text-light d-flex justify-content-center align-items-center"
-//         style={{ height: "2pppx" }}
-//       >
-        
-//         Lorem ipsum dolor sit amet.
-//       </div>
-//     </>
-//   );
-// }
-
-export default App;
+  export default App;
